@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DigitBtnStyleNumbers">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:onClick">addNumber</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:backgroundTint"> #ADD8E6 </item>
+
+    </style>
+    <style name="DigitBtnStyleOperators">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:onClick">addOperator</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:backgroundTint"> #FFA07A </item>
+    </style>
+
+</resources>
