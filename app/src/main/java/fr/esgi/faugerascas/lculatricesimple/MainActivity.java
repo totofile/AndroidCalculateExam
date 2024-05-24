@@ -13,12 +13,14 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Déclaration des variables
     private TextView screen;
     private int op1 = 0;
     private int op2 = 0;
     private Ops operator = null;
     private boolean isOp1 = true;
 
+    // Enumération des opérations possibles
     private enum Ops { PLUS, MOINS, FOIS, DIV }
 
     @Override
@@ -32,10 +34,11 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Get a reference to the TextView
+        // Récupération de la référence à la TextView
         screen = findViewById(R.id.TV1);
     }
 
+    // Méthode appelée lorsqu'un bouton numérique est cliqué
     public void onNumberClick(View v) {
         String number = ((Button) v).getText().toString();
         screen.append(number);
@@ -46,7 +49,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // Méthode appelée lorsqu'un bouton opérateur est cliqué
     public void onOperatorClick(View v) {
+        if (!isOp1) {
+            screen.setText("Erreur: Deux opérateurs consécutifs");
+            return;
+        }
         String operatorText = ((Button) v).getText().toString();
         screen.append(operatorText);
         isOp1 = false;
@@ -66,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // Méthode appelée lorsqu'on veut calculer le résultat
     public void computeResult(View v) {
         if (operator != null) {
             switch (operator) {
@@ -79,6 +88,10 @@ public class MainActivity extends AppCompatActivity {
                     op1 *= op2;
                     break;
                 case DIV:
+                    if (op2 == 0) {
+                        screen.setText("Erreur: Division par zéro");
+                        return;
+                    }
                     op1 /= op2;
                     break;
             }
@@ -87,6 +100,8 @@ public class MainActivity extends AppCompatActivity {
             updateDisplay(op1);
         }
     }
+
+    // Méthode appelée pour réinitialiser l'opération
     public void clear(View v) {
         op1 = 0;
         op2 = 0;
@@ -95,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
         screen.setText("");
     }
 
+    // Méthode pour mettre à jour l'affichage
     private void updateDisplay(int number) {
         screen.setText(String.valueOf(number));
     }

@@ -17,37 +17,39 @@
 
         <TextView
             android:id="@+id/TV1"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
             android:text=""
             android:textAlignment="center"
             android:textSize="50sp"
             android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
             app:layout_constraintBottom_toTopOf="@+id/tableLayout3"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.164" />
 
         <TableLayout
             android:id="@+id/tableLayout3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="250dp"
             android:shrinkColumns="*"
             android:stretchColumns="*"
             app:layout_constraintBottom_toBottomOf="parent">
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <Button
                     android:id="@+id/btn_c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_span="4"
-                    android:text="C"
+                    android:backgroundTint="#FF6347"
                     android:onClick="clear"
-                    android:backgroundTint="#FF6347" />
+                    android:text="C" />
             </TableRow>
 
             <TableRow
@@ -61,16 +63,16 @@
                     android:text="1" />
 
                 <Button
-                    style="@style/DigitBtnStyleNumbers"
                     android:id="@+id/btn_2"
-                    android:text="2"
-                    android:onClick="onNumberClick" />
+                    style="@style/DigitBtnStyleNumbers"
+                    android:onClick="onNumberClick"
+                    android:text="2" />
 
                 <Button
-                    style="@style/DigitBtnStyleNumbers"
                     android:id="@+id/btn_3"
-                    android:text="3"
-                    android:onClick="onNumberClick" />
+                    style="@style/DigitBtnStyleNumbers"
+                    android:onClick="onNumberClick"
+                    android:text="3" />
 
                 <Button
                     android:id="@+id/btn_plus"
@@ -85,22 +87,22 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    style="@style/DigitBtnStyleNumbers"
                     android:id="@+id/btn_4"
-                    android:text="4"
-                    android:onClick="onNumberClick" />
+                    style="@style/DigitBtnStyleNumbers"
+                    android:onClick="onNumberClick"
+                    android:text="4" />
 
                 <Button
-                    style="@style/DigitBtnStyleNumbers"
                     android:id="@+id/btn_5"
-                    android:text="5"
-                    android:onClick="onNumberClick" />
+                    style="@style/DigitBtnStyleNumbers"
+                    android:onClick="onNumberClick"
+                    android:text="5" />
 
                 <Button
-                    style="@style/DigitBtnStyleNumbers"
                     android:id="@+id/btn_6"
-                    android:text="6"
-                    android:onClick="onNumberClick" />
+                    style="@style/DigitBtnStyleNumbers"
+                    android:onClick="onNumberClick"
+                    android:text="6" />
 
                 <Button
                     android:id="@+id/btn_moins"
@@ -115,22 +117,22 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    style="@style/DigitBtnStyleNumbers"
                     android:id="@+id/btn_7"
-                    android:text="7"
-                    android:onClick="onNumberClick" />
+                    style="@style/DigitBtnStyleNumbers"
+                    android:onClick="onNumberClick"
+                    android:text="7" />
 
                 <Button
-                    style="@style/DigitBtnStyleNumbers"
                     android:id="@+id/btn_8"
-                    android:text="8"
-                    android:onClick="onNumberClick" />
+                    style="@style/DigitBtnStyleNumbers"
+                    android:onClick="onNumberClick"
+                    android:text="8" />
 
                 <Button
-                    style="@style/DigitBtnStyleNumbers"
                     android:id="@+id/btn_9"
-                    android:text="9"
-                    android:onClick="onNumberClick" />
+                    style="@style/DigitBtnStyleNumbers"
+                    android:onClick="onNumberClick"
+                    android:text="9" />
 
                 <Button
                     android:id="@+id/btn_fois"
@@ -149,6 +151,7 @@
                     style="@style/DigitBtnStyleNumbers"
                     android:onClick="onNumberClick"
                     android:text="0" />
+
                 <Button
                     android:id="@+id/btn_egal"
                     style="@style/DigitBtnStyleOperators"
